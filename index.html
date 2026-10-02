@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Gastos</title>
+  <meta name="description" content="Planilha de gastos local — adicione e remova gastos, tudo salvo no seu celular." />
+  <meta name="theme-color" content="#10b981" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Gastos" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="top">
+      <div class="title-row">
+        <h1 class="title">Gastos</h1>
+        <button id="installBtn" class="install-btn" hidden>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Instalar
+        </button>
+      </div>
+      <div class="total-card">
+        <div>
+          <div class="total-label">Total gasto</div>
+        </div>
+        <div class="total-value" id="total">R$ 0,00</div>
+      </div>
+
+      <div class="form">
+        <input id="description" type="text" placeholder="Descrição (ex.: Almoço)" autocomplete="off" />
+        <div class="row">
+          <input id="amount" type="text" inputmode="decimal" placeholder="0,00" />
+          <input id="date" type="text" inputmode="numeric" placeholder="dd/mm/aaaa" />
+        </div>
+        <div class="chips" id="chips"></div>
+        <button id="addBtn" class="add-btn">+ Adicionar gasto</button>
+      </div>
+    </div>
+
+    <div id="list"></div>
+
+    <div class="toast" id="toast" hidden></div>
+    <div id="iosHint" class="ios-hint" hidden>
+      Para instalar: toque em <strong>Compartilhar</strong> e depois <strong>Adicionar à Tela de Início</strong>.
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
