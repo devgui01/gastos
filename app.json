@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Gastos",
+    "slug": "gastos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#f4f6fb",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.devgui01.gastos"
+    },
+    "android": {
+      "package": "com.devgui01.gastos",
+      "backgroundColor": "#f4f6fb"
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
